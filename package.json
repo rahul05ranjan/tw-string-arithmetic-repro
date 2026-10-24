@@ -1,0 +1,11 @@
+{
+  "name": "tw-string-arithmetic-repro",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./out.css"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4",
+    "tailwindcss": "^4"
+  }
+}

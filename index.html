@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/out.css" />
+  </head>
+  <body>
+    <!-- Expected: content: "(min(1,2))" -- Actual: content: "(min(1, 2))" -->
+    <div class="content-['(min(1,2))']">one</div>
+
+    <!-- Expected: content: "(calc(1px+2px))" -- Actual: content: "(calc(1px + 2px))" -->
+    <div class="content-['(calc(1px+2px))']">two</div>
+
+    <!-- Control: no math function name inside the string, output is untouched -->
+    <div class="content-['(1+2)']">three</div>
+  </body>
+</html>
